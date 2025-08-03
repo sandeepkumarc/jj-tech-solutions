@@ -1,132 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="JJ TECHINNOVATE SOLUTIONS LLC - Your strategic partner in data governance, quality, and cloud transformation." />
-  <title>JJ TECHINNOVATE SOLUTIONS LLC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JJ TECHINNOVATE SOLUTIONS</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background: #f5f7fa;
-      color: #1f2937;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0A0A23;
+      color: #FFFFFF;
     }
 
     header {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: white;
-      padding: 4rem 2rem;
+      background-color: #0A0A23;
+      padding: 2rem 1rem;
       text-align: center;
     }
 
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      color: #FFD700;
     }
 
-    header p {
-      font-size: 1.25rem;
-      max-width: 600px;
-      margin: 0 auto;
+    nav {
+      text-align: center;
+      margin-top: 1rem;
     }
 
-    section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
+    nav a {
+      margin: 0 15px;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    .hero {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.2rem;
+      color: #FFD700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 1rem auto;
+      color: #BBBBBB;
+    }
+
+    .btn {
+      background-color: #FFD700;
+      color: #0A0A23;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+
+    .btn:hover {
+      background-color: #e6c200;
+    }
+
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
       margin: auto;
     }
 
-    .services, .about {
+    .section h3 {
+      font-size: 1.8rem;
+      color: #FFD700;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      font-size: 1rem;
+      color: #CCCCCC;
+      line-height: 1.6;
+    }
+
+    .service-grid {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
+      margin-top: 2rem;
     }
 
     .service-box {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s;
+      background-color: #1A1A33;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
     }
 
     .service-box:hover {
       transform: translateY(-5px);
     }
 
-    .service-box h3 {
-      color: #1e40af;
-      margin-bottom: 0.5rem;
-    }
-
     footer {
-      background: #1e3a8a;
-      color: white;
-      padding: 2rem;
+      background-color: #0A0A23;
       text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #888;
     }
 
-    a {
-      color: #93c5fd;
-      text-decoration: none;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
-
 <body>
+
   <header>
-    <h1>JJ TECHINNOVATE SOLUTIONS LLC</h1>
-    <p>Your Strategic Partner in Data Governance, Quality, and Cloud Transformation</p>
+    <h1>JJ TECHINNOVATE SOLUTIONS</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="services">
-    <h2 style="text-align:center; margin-bottom: 2rem;">Our Expertise</h2>
+  <section class="hero">
+    <h2>Your Trusted Partner in Data Governance & Cloud Solutions</h2>
+    <p>We help enterprises implement powerful data strategies using Collibra, AWS, Azure, and Google Cloud — transforming governance into a competitive advantage.</p>
+    <a href="#contact" class="btn">Let's Connect</a>
+  </section>
 
-    <div class="service-box">
-      <h3>Enterprise Data Governance</h3>
-      <p>Designing and deploying enterprise-grade data governance frameworks, including Collibra-based policy enforcement, stewardship, and accountability.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Data Quality Management</h3>
-      <p>Implementing data profiling, quality metrics, validation frameworks, and continuous monitoring to ensure trusted data assets.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Metadata & Data Lineage</h3>
-      <p>Automated technical lineage solutions integrated with your cloud ecosystem (AWS, Azure, GCP) and ETL tools to build transparency and trust.</p>
-    </div>
-
-    <div class="service-box">
-      <h3>Cloud Enablement</h3>
-      <p>Accelerating cloud transformation by aligning metadata strategy, policy enforcement, and governance across multi-cloud architectures.</p>
+  <section id="services" class="section">
+    <h3>Our Expertise</h3>
+    <div class="service-grid">
+      <div class="service-box">
+        <h4>Data Governance Frameworks</h4>
+        <p>End-to-end governance solutions powered by Collibra. Policy design, stewardship models, and execution support.</p>
+      </div>
+      <div class="service-box">
+        <h4>Metadata Management</h4>
+        <p>Structure your enterprise metadata using automated lineage, classifications, and integration patterns.</p>
+      </div>
+      <div class="service-box">
+        <h4>Cloud Integration</h4>
+        <p>Cloud-native data governance for AWS, Azure, and GCP. Secure, scalable, and compliant by design.</p>
+      </div>
+      <div class="service-box">
+        <h4>Data Quality Management</h4>
+        <p>Improve trust in data through rules, scorecards, and real-time monitoring with actionable insights.</p>
+      </div>
+      <div class="service-box">
+        <h4>Custom Automation (Python & Groovy)</h4>
+        <p>Scripted solutions tailored to your platform, accelerating implementation and reducing manual effort.</p>
+      </div>
+      <div class="service-box">
+        <h4>Enterprise Onboarding & Training</h4>
+        <p>Equip your teams with hands-on training and knowledge to sustain governance maturity long-term.</p>
+      </div>
     </div>
   </section>
 
-  <section class="about">
-    <h2 style="text-align:center; margin-bottom: 2rem;">About Us</h2>
+  <section id="about" class="section">
+    <h3>Why Choose Us</h3>
     <p>
-      JJ TECHINNOVATE SOLUTIONS LLC is a boutique consulting firm committed to helping enterprises build modern, scalable, and compliant data governance programs. With deep hands-on experience in Collibra and cloud platforms (AWS, Azure, Google Cloud), we partner with your organization to deliver end-to-end solutions across metadata management, policy enforcement, and data quality monitoring.
+      As a boutique consulting firm, we offer personalized, high-touch services that large firms often overlook.
+      With deep expertise in Collibra and enterprise cloud ecosystems, we focus on delivering impactful solutions
+      — not just presentations. Every engagement is tailored, nimble, and executed with precision.
     </p>
   </section>
 
-  <section class="about">
-    <h2 style="text-align:center; margin-bottom: 2rem;">Contact</h2>
-    <p>Interested in transforming your data strategy? Let’s talk.</p>
-    <p><strong>Email:</strong> <a href="mailto:admin@jj-tech-solutions.com">admin@jj-tech-solutions.com</a></p>
+  <section id="contact" class="section">
+    <h3>Contact</h3>
+    <p>Email us at <a href="mailto:admin@jj-tech-solutions.com" style="color:#FFD700;">admin@jj-tech-solutions.com</a> to start a conversation.</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 JJ TECHINNOVATE SOLUTIONS LLC. All rights reserved.</p>
+    &copy; 2025 JJ TECHINNOVATE SOLUTIONS LLC. All rights reserved.
   </footer>
-</body>
 
+</body>
 </html>
