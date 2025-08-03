@@ -2,141 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JJ TECHINNOVATE SOLUTIONS LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      background-color: #f9f9f9;
-    }
-
-    header {
-      background: linear-gradient(to right, #2b5876, #4e4376);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-      opacity: 0.9;
-    }
-
-    nav {
-      background-color: white;
-      padding: 15px 0;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #444;
-      font-weight: 500;
-    }
-
-    .section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .section h2 {
-      color: #333;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    .section p {
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .cta {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #eaf0ff;
-    }
-
-    .cta h2 {
-      margin-bottom: 20px;
-    }
-
-    .cta a {
-      background-color: #2b5876;
-      color: white;
-      padding: 12px 30px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background-color: #f0f0f0;
-      font-size: 0.9em;
-      color: #888;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f9f9f9; color: #222; line-height: 1.6; }
+    header { background: linear-gradient(90deg, #007cf0, #00dfd8); padding: 80px 20px; text-align: center; color: white; }
+    header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; }
+    header p { font-size: 1.25rem; }
+    nav { text-align: center; background: #fff; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    nav a { margin: 0 15px; text-decoration: none; color: #007cf0; font-weight: 600; }
+    .section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    .section h2 { font-size: 2rem; margin-bottom: 30px; text-align: center; }
+    .services, .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+    .card { background: white; padding: 25px; border-radius: 16px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .card i { font-size: 2rem; color: #007cf0; margin-bottom: 15px; }
+    .cta { background: #e0f7fa; text-align: center; padding: 60px 20px; }
+    .cta h2 { margin-bottom: 20px; }
+    .cta button { background: #007cf0; color: white; border: none; padding: 15px 30px; font-size: 1rem; border-radius: 8px; cursor: pointer; }
+    .cta button:hover { background: #005fa3; }
+    footer { text-align: center; padding: 40px 20px; background: #f0f0f0; color: #666; font-size: 0.9rem; }
   </style>
 </head>
 <body>
-
   <header>
     <h1>JJ TECHINNOVATE SOLUTIONS LLC</h1>
-    <p>Data Governance | Cloud | Quality Insights</p>
+    <p>Enabling Enterprise Data Governance & Quality at Scale</p>
   </header>
 
   <nav>
-    <a href="#governance">Data Governance</a>
-    <a href="#cloud">Cloud Platforms</a>
-    <a href="#quality">Data Quality</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="governance" class="section">
-    <h2>Data Governance</h2>
-    <p>We offer full-stack data governance implementations including metadata management, lineage tracking, data stewardship workflows, and role-based policy enforcement. Our solutions leverage Collibra, Informatica, and custom API integrations tailored for your enterprise needs.</p>
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <i class="fas fa-database"></i>
+        <h3>Enterprise Data Governance</h3>
+        <p>Robust frameworks and scalable policies to ensure data compliance and governance maturity.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Collibra Implementation</h3>
+        <p>Collibra integrations for metadata management, policy enforcement, and data stewardship.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-check-circle"></i>
+        <h3>Data Quality Management</h3>
+        <p>Automated profiling, rule definition, and quality scorecards to maintain trusted data.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-cloud"></i>
+        <h3>Cloud Data Strategy</h3>
+        <p>Advisory and migration services across AWS, Azure, and GCP to modernize data platforms.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="cloud" class="section">
-    <h2>Cloud Platform Integration</h2>
-    <p>Our team specializes in deploying scalable data solutions across AWS, Google Cloud, and Azure. We ensure seamless integration with your data fabric, including ETL pipelines, data lakes, and compliance-driven cloud security models.</p>
+  <section class="section" id="why">
+    <h2>Why Choose JJ TechInnovate</h2>
+    <div class="features">
+      <div class="card">
+        <i class="fas fa-user-shield"></i>
+        <h3>Trusted Expertise</h3>
+        <p>15+ years of experience in enterprise data governance and cloud integration.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-rocket"></i>
+        <h3>Speed to Value</h3>
+        <p>Rapid deployment methodology ensures ROI in weeks, not months.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-tools"></i>
+        <h3>Custom Solutions</h3>
+        <p>Tailored configurations and rule sets aligned to your business needs.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="quality" class="section">
-    <h2>Data Quality & Insights</h2>
-    <p>Ensure high-quality, trustworthy data across your organization with advanced data profiling, validation, and cleansing techniques. We help automate quality rule enforcement and provide dashboards that deliver real-time data confidence.</p>
-  </section>
-
-  <section id="contact" class="cta">
-    <h2>Ready to transform your data ecosystem?</h2>
-    <a href="mailto:sandeepkumarc@gmail.com">Get in Touch</a>
+  <section class="cta" id="contact">
+    <h2>Ready to Transform Your Data Landscape?</h2>
+    <p>Partner with JJ TECHINNOVATE to drive trusted data decisions.</p>
+    <button onclick="window.location.href='mailto:sandeepkumarc@gmail.com'">Get In Touch</button>
   </section>
 
   <footer>
-    &copy; 2025 JJ TECHINNOVATE SOLUTIONS LLC. All rights reserved.
+    <p>&copy; 2025 JJ TECHINNOVATE SOLUTIONS LLC. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
