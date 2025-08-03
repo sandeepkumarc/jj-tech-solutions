@@ -8,29 +8,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-    body { background: #f9f9f9; color: #222; line-height: 1.6; }
+    body { background: #f9f9f9; color: #222; line-height: 1.6; scroll-behavior: smooth; }
     header { background: linear-gradient(90deg, #007cf0, #00dfd8); padding: 80px 20px; text-align: center; color: white; }
     header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; }
-    header p { font-size: 1.25rem; }
-    nav { text-align: center; background: #fff; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    nav a { margin: 0 15px; text-decoration: none; color: #007cf0; font-weight: 600; }
+    header p { font-size: 1.25rem; max-width: 800px; margin: 0 auto; }
+    nav { text-align: center; background: #fff; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+    nav a { margin: 0 15px; text-decoration: none; color: #007cf0; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: #005fa3; }
     .section { padding: 60px 20px; max-width: 1000px; margin: auto; }
     .section h2 { font-size: 2rem; margin-bottom: 30px; text-align: center; }
     .services, .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
-    .card { background: white; padding: 25px; border-radius: 16px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease; }
-    .card:hover { transform: translateY(-5px); }
+    .card { background: white; padding: 25px; border-radius: 16px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
     .card i { font-size: 2rem; color: #007cf0; margin-bottom: 15px; }
     .cta { background: #e0f7fa; text-align: center; padding: 60px 20px; }
-    .cta h2 { margin-bottom: 20px; }
-    .cta button { background: #007cf0; color: white; border: none; padding: 15px 30px; font-size: 1rem; border-radius: 8px; cursor: pointer; }
+    .cta h2 { margin-bottom: 20px; font-size: 1.8rem; }
+    .cta p { margin-bottom: 25px; font-size: 1.1rem; }
+    .cta button { background: #007cf0; color: white; border: none; padding: 15px 30px; font-size: 1rem; border-radius: 8px; cursor: pointer; transition: background 0.3s ease; }
     .cta button:hover { background: #005fa3; }
     footer { text-align: center; padding: 40px 20px; background: #f0f0f0; color: #666; font-size: 0.9rem; }
+    .trust { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 30px; }
+    .trust .card { max-width: 280px; }
+    .contact-info { margin-top: 20px; font-size: 1rem; color: #333; }
+    .contact-info a { color: #007cf0; text-decoration: none; }
+    .contact-info a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
     <h1>JJ TECHINNOVATE SOLUTIONS LLC</h1>
-    <p>Enabling Enterprise Data Governance & Quality at Scale</p>
+    <p>Struggling with fragmented metadata or data trust issues? We help enterprises streamline data governance using Collibra and industry-leading practices.</p>
   </header>
 
   <nav>
@@ -57,11 +64,6 @@
         <h3>Data Quality Management</h3>
         <p>Automated profiling, rule definition, and quality scorecards to maintain trusted data.</p>
       </div>
-      <div class="card">
-        <i class="fas fa-cloud"></i>
-        <h3>Cloud Data Strategy</h3>
-        <p>Advisory and migration services across AWS, Azure, and GCP to modernize data platforms.</p>
-      </div>
     </div>
   </section>
 
@@ -71,7 +73,7 @@
       <div class="card">
         <i class="fas fa-user-shield"></i>
         <h3>Trusted Expertise</h3>
-        <p>15+ years of experience in enterprise data governance and cloud integration.</p>
+        <p>15+ years of experience in enterprise data governance and Collibra deployments.</p>
       </div>
       <div class="card">
         <i class="fas fa-rocket"></i>
@@ -79,9 +81,21 @@
         <p>Rapid deployment methodology ensures ROI in weeks, not months.</p>
       </div>
       <div class="card">
-        <i class="fas fa-tools"></i>
-        <h3>Custom Solutions</h3>
-        <p>Tailored configurations and rule sets aligned to your business needs.</p>
+        <i class="fas fa-cogs"></i>
+        <h3>Workflow Automation</h3>
+        <p>We design and build automated workflows that scale with your data ecosystem.</p>
+      </div>
+    </div>
+    <div class="trust">
+      <div class="card">
+        <i class="fas fa-thumbs-up"></i>
+        <h3>Client Success</h3>
+        <p>"Reduced data audit time by 70% — a game-changer for compliance." – Fortune 500 Insurance Client</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Collibra Certified</h3>
+        <p>Certified Collibra professionals with deep platform expertise and best practices.</p>
       </div>
     </div>
   </section>
@@ -89,7 +103,11 @@
   <section class="cta" id="contact">
     <h2>Ready to Transform Your Data Landscape?</h2>
     <p>Partner with JJ TECHINNOVATE to drive trusted data decisions.</p>
-    <button onclick="window.location.href='mailto:sandeepkumarc@gmail.com'">Get In Touch</button>
+    <button onclick="window.location.href='mailto:sandeepkumarc@gmail.com'">Book a Free Discovery Call</button>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:sandeepkumarc@gmail.com">sandeepkumarc@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/sandeepkumarc/" target="_blank">Connect with us</a></p>
+    </div>
   </section>
 
   <footer>
