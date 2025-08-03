@@ -2,147 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JJ TECHINNOVATE SOLUTIONS LLC</title>
   <style>
-    :root {
-      --primary: #0f172a;
-      --accent: #00c2a8;
-      --bg: #f9fafb;
-      --card-bg: #ffffff;
-      --text: #1f2937;
-      --shadow: rgba(0, 0, 0, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      padding: 0;
+      color: #222;
+      background-color: #f9f9f9;
     }
 
     header {
-      background: linear-gradient(135deg, var(--primary), #1e3a8a);
+      background: linear-gradient(to right, #2b5876, #4e4376);
       color: white;
+      padding: 60px 20px;
       text-align: center;
-      padding: 4rem 2rem 3rem;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 1px;
     }
 
     header p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
+      font-size: 1.2em;
+      margin-top: 10px;
+      opacity: 0.9;
     }
 
     nav {
-      background: var(--accent);
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      background-color: white;
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
     nav a {
-      color: white;
+      margin: 0 15px;
       text-decoration: none;
-      padding: 1rem 1.5rem;
-      font-weight: bold;
-      transition: background 0.3s;
+      color: #444;
+      font-weight: 500;
     }
 
-    nav a:hover {
-      background: rgba(0, 0, 0, 0.1);
-    }
-
-    section {
-      max-width: 1000px;
+    .section {
+      padding: 60px 20px;
+      max-width: 900px;
       margin: auto;
-      padding: 4rem 2rem;
     }
 
-    h2 {
+    .section h2 {
+      color: #333;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .cta {
       text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      padding: 40px 20px;
+      background-color: #eaf0ff;
     }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
+    .cta h2 {
+      margin-bottom: 20px;
     }
 
-    .card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px var(--shadow);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: var(--accent);
-      font-size: 1.3rem;
-    }
-
-    .card p {
-      margin-bottom: 0;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background: var(--accent);
+    .cta a {
+      background-color: #2b5876;
       color: white;
-      padding: 0.75rem 1.5rem;
-      margin-top: 1.5rem;
+      padding: 12px 30px;
       border-radius: 6px;
+      text-decoration: none;
       font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background: #048f7b;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact a {
-      color: var(--accent);
-      text-decoration: none;
+      font-size: 1em;
+      display: inline-block;
+      margin-top: 10px;
     }
 
     footer {
-      background: var(--primary);
-      color: white;
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
+      padding: 30px 20px;
+      background-color: #f0f0f0;
+      font-size: 0.9em;
+      color: #888;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
-      }
-      nav a {
-        flex: 1 1 100%;
-        text-align: center;
+        font-size: 2em;
       }
     }
   </style>
@@ -151,66 +104,38 @@
 
   <header>
     <h1>JJ TECHINNOVATE SOLUTIONS LLC</h1>
-    <p>Collibra-Focused Data Governance, Cloud Integration, and Enterprise Data Quality Solutions</p>
+    <p>Data Governance | Cloud | Quality Insights</p>
   </header>
 
   <nav>
-    <a href="#services">Services</a>
-    <a href="#expertise">Collibra Expertise</a>
+    <a href="#governance">Data Governance</a>
+    <a href="#cloud">Cloud Platforms</a>
+    <a href="#quality">Data Quality</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Enterprise Data Governance</h3>
-        <p>Implement Collibra-powered frameworks to ensure data transparency, ownership, policy compliance, and data-driven decision-making.</p>
-      </div>
-      <div class="card">
-        <h3>Metadata Management</h3>
-        <p>Automate metadata ingestion and lineage mapping with REST APIs and native integrations to cloud data warehouses.</p>
-      </div>
-      <div class="card">
-        <h3>Cloud Integration</h3>
-        <p>Govern data across AWS, Azure, and GCP using secure, scalable connectors and automated cataloging.</p>
-      </div>
-      <div class="card">
-        <h3>Data Quality</h3>
-        <p>Deploy Collibra Data Quality and Observability to profile, validate, and monitor critical datasets across the enterprise.</p>
-      </div>
-    </div>
+  <section id="governance" class="section">
+    <h2>Data Governance</h2>
+    <p>We offer full-stack data governance implementations including metadata management, lineage tracking, data stewardship workflows, and role-based policy enforcement. Our solutions leverage Collibra, Informatica, and custom API integrations tailored for your enterprise needs.</p>
   </section>
 
-  <section id="expertise">
-    <h2>Our Collibra Expertise</h2>
-    <div class="features">
-      <div class="card">
-        <h3>Implementation & Setup</h3>
-        <p>Configure Collibra communities, domains, workflows, access roles, and semantic models tailored to your org structure.</p>
-      </div>
-      <div class="card">
-        <h3>Business Glossary & Stewardship</h3>
-        <p>Define enterprise-wide terminology, assign stewardship responsibilities, and align technical metadata with business definitions.</p>
-      </div>
-      <div class="card">
-        <h3>Automation & APIs</h3>
-        <p>Develop custom Groovy workflows, automate lifecycle processes, and connect Collibra to your data ecosystem using REST APIs.</p>
-      </div>
-    </div>
+  <section id="cloud" class="section">
+    <h2>Cloud Platform Integration</h2>
+    <p>Our team specializes in deploying scalable data solutions across AWS, Google Cloud, and Azure. We ensure seamless integration with your data fabric, including ETL pipelines, data lakes, and compliance-driven cloud security models.</p>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact">
-      <p>Email: <a href="mailto:sandeepkumarc@gmail.com">sandeepkumarc@gmail.com</a></p>
-      <p>Location: North Dallas, Texas — Serving clients globally</p>
-      <p>Let’s simplify governance. <a class="cta-button" href="mailto:sandeepkumarc@gmail.com">Get in Touch</a></p>
-    </div>
+  <section id="quality" class="section">
+    <h2>Data Quality & Insights</h2>
+    <p>Ensure high-quality, trustworthy data across your organization with advanced data profiling, validation, and cleansing techniques. We help automate quality rule enforcement and provide dashboards that deliver real-time data confidence.</p>
+  </section>
+
+  <section id="contact" class="cta">
+    <h2>Ready to transform your data ecosystem?</h2>
+    <a href="mailto:sandeepkumarc@gmail.com">Get in Touch</a>
   </section>
 
   <footer>
-    <p>&copy; 2025 JJ TECHINNOVATE SOLUTIONS LLC. All rights reserved.</p>
+    &copy; 2025 JJ TECHINNOVATE SOLUTIONS LLC. All rights reserved.
   </footer>
 
 </body>
