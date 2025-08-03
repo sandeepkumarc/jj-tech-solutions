@@ -2,123 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JJ TECHINNOVATE SOLUTIONS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JJ TECHINNOVATE SOLUTIONS LLC</title>
   <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #00c2a8;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --text: #1f2937;
+      --shadow: rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0A0A23;
-      color: #FFFFFF;
-    }
-
-    header {
-      background-color: #0A0A23;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #FFD700;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: #FFFFFF;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #FFD700;
-    }
-
-    .hero {
-      padding: 4rem 1rem;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 2.2rem;
-      color: #FFD700;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 1rem auto;
-      color: #BBBBBB;
-    }
-
-    .btn {
-      background-color: #FFD700;
-      color: #0A0A23;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 5px;
-      margin-top: 1rem;
-    }
-
-    .btn:hover {
-      background-color: #e6c200;
-    }
-
-    .section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h3 {
-      font-size: 1.8rem;
-      color: #FFD700;
-      margin-bottom: 1rem;
-    }
-
-    .section p {
-      font-size: 1rem;
-      color: #CCCCCC;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
-    .service-grid {
+    header {
+      background: linear-gradient(135deg, var(--primary), #1e3a8a);
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    nav {
+      background: var(--accent);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2rem;
-      margin-top: 2rem;
     }
 
-    .service-box {
-      background-color: #1A1A33;
-      padding: 1.5rem;
-      border-radius: 10px;
-      transition: transform 0.2s ease;
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px var(--shadow);
+      transition: transform 0.3s ease;
     }
 
-    .service-box:hover {
+    .card:hover {
       transform: translateY(-5px);
     }
 
-    footer {
-      background-color: #0A0A23;
+    .card h3 {
+      margin-top: 0;
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      margin-bottom: 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      margin-top: 1.5rem;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #048f7b;
+    }
+
+    .contact {
       text-align: center;
-      padding: 2rem 1rem;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
       font-size: 0.9rem;
-      color: #888;
     }
 
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
+      }
+      nav a {
+        flex: 1 1 100%;
+        text-align: center;
       }
     }
   </style>
@@ -126,66 +150,67 @@
 <body>
 
   <header>
-    <h1>JJ TECHINNOVATE SOLUTIONS</h1>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>JJ TECHINNOVATE SOLUTIONS LLC</h1>
+    <p>Collibra-Focused Data Governance, Cloud Integration, and Enterprise Data Quality Solutions</p>
   </header>
 
-  <section class="hero">
-    <h2>Your Trusted Partner in Data Governance & Cloud Solutions</h2>
-    <p>We help enterprises implement powerful data strategies using Collibra, AWS, Azure, and Google Cloud — transforming governance into a competitive advantage.</p>
-    <a href="#contact" class="btn">Let's Connect</a>
-  </section>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#expertise">Collibra Expertise</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section id="services" class="section">
-    <h3>Our Expertise</h3>
-    <div class="service-grid">
-      <div class="service-box">
-        <h4>Data Governance Frameworks</h4>
-        <p>End-to-end governance solutions powered by Collibra. Policy design, stewardship models, and execution support.</p>
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Enterprise Data Governance</h3>
+        <p>Implement Collibra-powered frameworks to ensure data transparency, ownership, policy compliance, and data-driven decision-making.</p>
       </div>
-      <div class="service-box">
-        <h4>Metadata Management</h4>
-        <p>Structure your enterprise metadata using automated lineage, classifications, and integration patterns.</p>
+      <div class="card">
+        <h3>Metadata Management</h3>
+        <p>Automate metadata ingestion and lineage mapping with REST APIs and native integrations to cloud data warehouses.</p>
       </div>
-      <div class="service-box">
-        <h4>Cloud Integration</h4>
-        <p>Cloud-native data governance for AWS, Azure, and GCP. Secure, scalable, and compliant by design.</p>
+      <div class="card">
+        <h3>Cloud Integration</h3>
+        <p>Govern data across AWS, Azure, and GCP using secure, scalable connectors and automated cataloging.</p>
       </div>
-      <div class="service-box">
-        <h4>Data Quality Management</h4>
-        <p>Improve trust in data through rules, scorecards, and real-time monitoring with actionable insights.</p>
-      </div>
-      <div class="service-box">
-        <h4>Custom Automation (Python & Groovy)</h4>
-        <p>Scripted solutions tailored to your platform, accelerating implementation and reducing manual effort.</p>
-      </div>
-      <div class="service-box">
-        <h4>Enterprise Onboarding & Training</h4>
-        <p>Equip your teams with hands-on training and knowledge to sustain governance maturity long-term.</p>
+      <div class="card">
+        <h3>Data Quality</h3>
+        <p>Deploy Collibra Data Quality and Observability to profile, validate, and monitor critical datasets across the enterprise.</p>
       </div>
     </div>
   </section>
 
-  <section id="about" class="section">
-    <h3>Why Choose Us</h3>
-    <p>
-      As a boutique consulting firm, we offer personalized, high-touch services that large firms often overlook.
-      With deep expertise in Collibra and enterprise cloud ecosystems, we focus on delivering impactful solutions
-      — not just presentations. Every engagement is tailored, nimble, and executed with precision.
-    </p>
+  <section id="expertise">
+    <h2>Our Collibra Expertise</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Implementation & Setup</h3>
+        <p>Configure Collibra communities, domains, workflows, access roles, and semantic models tailored to your org structure.</p>
+      </div>
+      <div class="card">
+        <h3>Business Glossary & Stewardship</h3>
+        <p>Define enterprise-wide terminology, assign stewardship responsibilities, and align technical metadata with business definitions.</p>
+      </div>
+      <div class="card">
+        <h3>Automation & APIs</h3>
+        <p>Develop custom Groovy workflows, automate lifecycle processes, and connect Collibra to your data ecosystem using REST APIs.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="contact" class="section">
-    <h3>Contact</h3>
-    <p>Email us at <a href="mailto:admin@jj-tech-solutions.com" style="color:#FFD700;">admin@jj-tech-solutions.com</a> to start a conversation.</p>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact">
+      <p>Email: <a href="mailto:sandeepkumarc@gmail.com">sandeepkumarc@gmail.com</a></p>
+      <p>Location: North Dallas, Texas — Serving clients globally</p>
+      <p>Let’s simplify governance. <a class="cta-button" href="mailto:sandeepkumarc@gmail.com">Get in Touch</a></p>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 JJ TECHINNOVATE SOLUTIONS LLC. All rights reserved.
+    <p>&copy; 2025 JJ TECHINNOVATE SOLUTIONS LLC. All rights reserved.</p>
   </footer>
 
 </body>
