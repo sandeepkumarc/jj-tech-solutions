@@ -6,10 +6,12 @@
   <title>JJ TECHINNOVATE SOLUTIONS LLC</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Optional favicon made from the same SVG (works on GitHub Pages) -->
+  <link rel="icon" type="image/svg+xml" href="#jj-logo-favicon"/>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
     body { background: #f9f9f9; color: #222; line-height: 1.6; scroll-behavior: smooth; }
-    header { background: linear-gradient(90deg, #007cf0, #00dfd8); padding: 80px 20px; text-align: center; color: white; }
+    header { background: linear-gradient(90deg, #007cf0, #00dfd8); padding: 80px 20px; text-align: center; color: white; position: relative; overflow: hidden; }
     header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; }
     header p { font-size: 1.25rem; max-width: 800px; margin: 0 auto; }
     nav { text-align: center; background: #fff; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
@@ -32,10 +34,33 @@
     .contact-info { margin-top: 20px; font-size: 1rem; color: #333; }
     .contact-info a { color: #007cf0; text-decoration: none; }
     .contact-info a:hover { text-decoration: underline; }
+
+    /* Logo styles */
+    .logo-wrap { display:flex; justify-content:center; margin-bottom:16px; }
+    .logo { width: 92px; height: 92px; filter: drop-shadow(0 8px 16px rgba(0,0,0,.18)); }
+    .logo:hover { transform: translateY(-1px); transition: .2s ease; }
   </style>
 </head>
 <body>
   <header>
+    <!-- Inline SVG: Double abstract "J" mark (mirrored Js) -->
+    <div class="logo-wrap" aria-hidden="false">
+      <svg class="logo" viewBox="0 0 256 256" role="img" aria-labelledby="jjLogoTitle jjLogoDesc">
+        <title id="jjLogoTitle">JJ TechInnovate Double-J Logo</title>
+        <desc id="jjLogoDesc">Two abstract interlocking J shapes forming a balanced, modern mark</desc>
+        <defs>
+          <linearGradient id="jjGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00dfd8"/>
+            <stop offset="100%" stop-color="#007cf0"/>
+          </linearGradient>
+        </defs>
+        <!-- Left J -->
+        <path d="M68 36c-11 0-20 9-20 20v94c0 38 28 66 66 66 18 0 34-6 46-19 4-5 3-12-2-16-5-4-12-3-16 2-8 9-17 13-28 13-24 0-42-18-42-42V56c0-11-9-20-20-20Z" fill="url(#jjGradient)"/>
+        <!-- Right J (mirrored) -->
+        <path d="M188 36c11 0 20 9 20 20v94c0 38-28 66-66 66-18 0-34-6-46-19-4-5-3-12 2-16 5-4 12-3 16 2 8 9 17 13 28 13 24 0 42-18 42-42V56c0-11 9-20 20-20Z" fill="url(#jjGradient)" opacity="0.92"/>
+      </svg>
+    </div>
+
     <h1>JJ TECHINNOVATE SOLUTIONS LLC</h1>
     <p>Struggling with fragmented metadata or data trust issues? We help enterprises streamline data governance using Collibra and proven enterprise best practices.</p>
   </header>
@@ -101,12 +126,24 @@
     <button onclick="window.location.href='mailto:admin@jj-tech-solutions.com'">Book a Free Discovery Call</button>
     <div class="contact-info">
       <p>Email: <a href="mailto:admin@jj-tech-solutions.com">admin@jj-tech-solutions.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/sandeep-reddy-chintakunta-b8641015DUMMY/" target="_blank">Connect with us</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/sandeep-reddy-chintakunta-b8641015DUMMY/" target="_blank" rel="noopener">Connect with us</a></p>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 JJ TECHINNOVATE SOLUTIONS LLC. All rights reserved.</p>
   </footer>
+
+  <!-- Hidden inline SVG again as a data source for favicon (GitHub Pages friendly) -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="jj-logo-favicon" style="display:none">
+    <defs>
+      <linearGradient id="jjG" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00dfd8"/>
+        <stop offset="100%" stop-color="#007cf0"/>
+      </linearGradient>
+    </defs>
+    <path d="M68 36c-11 0-20 9-20 20v94c0 38 28 66 66 66 18 0 34-6 46-19 4-5 3-12-2-16-5-4-12-3-16 2-8 9-17 13-28 13-24 0-42-18-42-42V56c0-11-9-20-20-20Z" fill="url(#jjG)"/>
+    <path d="M188 36c11 0 20 9 20 20v94c0 38-28 66-66 66-18 0-34-6-46-19-4-5-3-12 2-16 5-4 12-3 16 2 8 9 17 13 28 13 24 0 42-18 42-42V56c0-11 9-20 20-20Z" fill="url(#jjG)"/>
+  </svg>
 </body>
 </html>
