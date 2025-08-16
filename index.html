@@ -44,46 +44,15 @@
 <body>
   <header>
     <!-- Inline SVG: Double abstract "J" mark (mirrored Js) -->
-    <div class="logo-wrap" aria-hidden="false">
+   
 
 <!-- JJ TechInnovate — Single-J with hidden double-stroke cue (inline SVG) -->
-<svg class="logo" viewBox="0 0 256 256" role="img" aria-labelledby="jjLogoTitle jjLogoDesc" xmlns="http://www.w3.org/2000/svg">
-  <title id="jjLogoTitle">JJ TechInnovate Monogram — Single J</title>
-  <desc id="jjLogoDesc">Rounded-square gradient with a single bold J and an inner cut that suggests a second hidden J</desc>
-
-  <defs>
-    <!-- Brand gradient matching your header -->
-    <linearGradient id="jjGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a84ff"/>
-      <stop offset="100%" stop-color="#00e0d8"/>
-    </linearGradient>
-
-    <!-- Mask that carves a thin inner slit from the J to imply the hidden 2nd J -->
-    <mask id="jCutMask">
-      <!-- Reveal everything by default -->
-      <rect x="0" y="0" width="256" height="256" fill="#fff"/>
-      <!-- This black stroke removes a slim section from the J, showing the gradient beneath -->
-      <path d="M152 92 V 152" stroke="#000" stroke-width="10" stroke-linecap="round"/>
-    </mask>
-
-    <!-- Favicon-ready symbol (so your <link rel="icon" href="#jj-logo-favicon"> works) -->
-    <symbol id="jj-logo-favicon" viewBox="0 0 256 256">
-      <!-- Background tile -->
-      <rect x="20" y="20" width="216" height="216" rx="40" ry="40" fill="url(#jjGradient)"/>
-      <!-- Foreground J (masked to create the inner slit) -->
-      <g mask="url(#jCutMask)">
-        <path d="M160 68 V 148 Q160 212 106 212 H 96" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round"/>
-      </g>
-    </symbol>
-  </defs>
-
-  <!-- Render symbol as the page logo -->
-  <use href="#jj-logo-favicon" width="256" height="256"/>
-</svg>
+<div class="logo-wrap" aria-hidden="false">
+  <img src="logo.png" alt="JJ TechInnovate Logo" class="logo">
+</div>
 
 
 
-    </div>
 
     <h1>JJ TECHINNOVATE SOLUTIONS LLC</h1>
     <p>Struggling with fragmented metadata or data trust issues? We help enterprises streamline data governance using Collibra and proven enterprise best practices.</p>
