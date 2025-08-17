@@ -4,57 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JJ TECHINNOVATE SOLUTIONS LLC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Optional favicon made from the same SVG (works on GitHub Pages) -->
-  <link rel="icon" type="image/svg+xml" href="#jj-logo-favicon"/>
+  
+  <!-- Proper favicon -->
+  <link rel="icon" type="image/png" href="logo.png"/>
+  
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
     body { background: #f9f9f9; color: #222; line-height: 1.6; scroll-behavior: smooth; }
-    header { background: linear-gradient(90deg, #007cf0, #00dfd8); padding: 80px 20px; text-align: center; color: white; position: relative; overflow: hidden; }
-    header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; }
-    header p { font-size: 1.25rem; max-width: 800px; margin: 0 auto; }
-    nav { text-align: center; background: #fff; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-    nav a { margin: 0 15px; text-decoration: none; color: #007cf0; font-weight: 600; transition: color 0.3s; }
-    nav a:hover { color: #005fa3; }
-    .section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    .section h2 { font-size: 2rem; margin-bottom: 30px; text-align: center; }
-    .services, .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+
+    header { 
+      background: linear-gradient(90deg, #007cf0, #00dfd8); 
+      padding: 80px 20px; 
+      color: white; 
+      position: relative; 
+      overflow: hidden; 
+    }
+    .brand { display:flex; align-items:center; justify-content:center; gap:16px; margin-bottom:20px; }
+    .logo { width: 100px; height: 100px; filter: drop-shadow(0 8px 16px rgba(0,0,0,.18)); }
+    header h1 { font-size: 2.5rem; font-weight: 800; }
+    header p { font-size: 1.3rem; font-weight: 500; max-width: 800px; margin: 15px auto 0; line-height:1.5; }
+
+    nav { 
+      text-align: center; 
+      background: #fff; 
+      padding: 12px; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+      position: sticky; 
+      top: 0; 
+      z-index: 1000; 
+    }
+    nav a { 
+      margin: 0 20px; 
+      text-decoration: none; 
+      color: #007cf0; 
+      font-weight: 600; 
+      position: relative;
+    }
+    nav a::after {
+      content:"";
+      position:absolute;
+      left:0; bottom:-4px;
+      width:0; height:2px;
+      background:#007cf0;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after, nav a:focus::after { width:100%; }
+
+    .section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+    .section h2 { font-size: 2.2rem; margin-bottom: 40px; text-align: center; }
+
+    .services, .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
     .card { background: white; padding: 25px; border-radius: 16px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
     .card i { font-size: 2rem; color: #007cf0; margin-bottom: 15px; }
-    .cta { background: #e0f7fa; text-align: center; padding: 60px 20px; }
-    .cta h2 { margin-bottom: 20px; font-size: 1.8rem; }
-    .cta p { margin-bottom: 25px; font-size: 1.1rem; }
-    .cta button { background: #007cf0; color: white; border: none; padding: 15px 30px; font-size: 1rem; border-radius: 8px; cursor: pointer; transition: background 0.3s ease; }
+
+    .cta { background: #e0f7fa; text-align: center; padding: 70px 20px; }
+    .cta h2 { margin-bottom: 20px; font-size: 1.9rem; }
+    .cta p { margin-bottom: 25px; font-size: 1.15rem; }
+    .cta button { background: #007cf0; color: white; border: none; padding: 15px 32px; font-size: 1rem; border-radius: 8px; cursor: pointer; transition: background 0.3s ease; }
     .cta button:hover { background: #005fa3; }
+    
     footer { text-align: center; padding: 40px 20px; background: #f0f0f0; color: #666; font-size: 0.9rem; }
-    .trust { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 30px; }
-    .trust .card { max-width: 280px; }
+
+    .trust { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 40px; }
+    .trust img { height: 50px; opacity: 0.8; transition: opacity 0.3s; }
+    .trust img:hover { opacity: 1; }
+
     .contact-info { margin-top: 20px; font-size: 1rem; color: #333; }
     .contact-info a { color: #007cf0; text-decoration: none; }
     .contact-info a:hover { text-decoration: underline; }
-
-    /* Logo styles */
-    .logo-wrap { display:flex; justify-content:center; margin-bottom:16px; }
-    .logo { width: 92px; height: 92px; filter: drop-shadow(0 8px 16px rgba(0,0,0,.18)); }
-    .logo:hover { transform: translateY(-1px); transition: .2s ease; }
   </style>
 </head>
 <body>
   <header>
-    <!-- Inline SVG: Double abstract "J" mark (mirrored Js) -->
-   
-
-<!-- JJ TechInnovate — Single-J with hidden double-stroke cue (inline SVG) -->
-<div class="logo-wrap" aria-hidden="false">
-  <img src="logo.png" alt="JJ TechInnovate Logo" class="logo">
-</div>
-
-
-
-
-    <h1>JJ TECHINNOVATE SOLUTIONS LLC</h1>
+    <div class="brand">
+      <img src="logo.png" alt="JJ TechInnovate Logo" class="logo">
+      <h1>JJ TECHINNOVATE SOLUTIONS LLC</h1>
+    </div>
     <p>Struggling with fragmented metadata or data trust issues? We help enterprises streamline data governance using Collibra and proven enterprise best practices.</p>
   </header>
 
@@ -105,11 +133,9 @@
       </div>
     </div>
     <div class="trust">
-      <div class="card">
-        <i class="fas fa-thumbs-up"></i>
-        <h3>Client Success</h3>
-        <p>"Reduced data audit time by 70% — a game-changer for compliance." – Fortune 500 Client</p>
-      </div>
+      <img src="https://dummyimage.com/140x50/cccccc/000000&text=Fortune+500" alt="Client Logo 1">
+      <img src="https://dummyimage.com/140x50/cccccc/000000&text=Global+Bank" alt="Client Logo 2">
+      <img src="https://dummyimage.com/140x50/cccccc/000000&text=Healthcare+Leader" alt="Client Logo 3">
     </div>
   </section>
 
@@ -126,6 +152,5 @@
   <footer>
     <p>&copy; 2025 JJ TECHINNOVATE SOLUTIONS LLC. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
